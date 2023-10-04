@@ -436,7 +436,6 @@
   stroke: var(--main-color);
   background-color: var(--background-color);
   transition: opacity 0.3s ease-in-out;
-  /* inline-size: 357px; */
   inline-size: clamp(341px, 24.8%, 357px);
 }
 
