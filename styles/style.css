@@ -21,6 +21,7 @@
   font-style: normal;
   background-image: var(--background-image);
   background-size: cover;
+  background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: "wght" var(--font-weight-normal);
@@ -87,16 +88,6 @@
   animation: horizontal-movement 0.5s infinite ease-in-out alternate;
 }
 
-@keyframes horizontal-movement {
-  from {
-    transform: translateX(-18px);
-  }
-
-  to {
-    transform: translateX(-22px);
-  }
-}
-
 .theme-menu__button:disabled {
   opacity: 0.6;
   pointer-events: none;
@@ -156,6 +147,7 @@
 
 .image-section {
   position: relative;
+  margin: 0px;
 }
 
 .image-label {
@@ -223,7 +215,7 @@
 }
 
 .card__footer {
-  padding: 22px 25px 18px 25px;
+  padding: 22px 25px 24px 25px;
 }
 
 .card__text {
@@ -293,6 +285,7 @@
   padding: 0;
   background-color: var(--background-color);
   cursor: pointer;
+  block-size: 38px;
 }
 
 .card__icon-button:focus {
@@ -347,6 +340,11 @@
   transition: opacity 0.3s linear;
 }
 
+.like-icon {
+  width: 39px;
+  height: 36px;
+}
+
 .like-icon.is-liked .core {
   opacity: 1;
   fill: var(--main-heart-color);
@@ -372,24 +370,6 @@
 
 .like-icon.is-liked .sparks {
   animation: sparks 0.3s 0.3s ease-in alternate;
-}
-
-@keyframes scale {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.5);
-  }
-}
-
-@keyframes sparks {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 /* Like button */
@@ -423,6 +403,11 @@
   position: relative;
   z-index: 1;
   mix-blend-mode: difference;
+}
+
+.floppy-icon {
+  width: 21px;
+  height: 21px;
 }
 
 .dialog {
